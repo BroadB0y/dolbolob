@@ -1,0 +1,12 @@
+use std::io;
+
+fn main() -> io::Result<()> {
+    let mut input: String = String::new();
+    println!("Введите свой возраст: ");
+    io::stdin().read_line(&mut input)?;
+    match input.trim() {
+        "1488" => println!("Запускаем вентиля, братва"),
+        _ => println!("Это не мой день рождения!"),
+    };
+    Ok(())
+}
